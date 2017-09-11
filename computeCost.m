@@ -18,7 +18,12 @@ J = 0;
 
 %As you are doing this, remember that the variables X and y are not scalar 
 %values, but matrices whose rows represent the examples from the training set
-J = 1/(2*m) * sum((X*theta - y) .^ 2); % Standard formula
+
+
+%J = 1/(2*m) * sum((X*theta - y) .^ 2); % Standard formula %Possible answer
+
+J = 1/(2*m) * (X * theta - y)' * (X * theta - y); % vectorized form
+% It is based on the cost function formula. It follows closely.
 % =========================================================================
 
 end
